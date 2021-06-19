@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@200&family=Glegoo:wght@700&family=Inter:wght@600&family=Oxygen:wght@300&family=Zilla+Slab:ital,wght@1,300;1,400&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -16,8 +14,8 @@ body {
 body .welcome {
   margin: 0;
   padding: 0;
-  height: calc(100vh);
-  width: calc(100vh-17px);
+  height: 100vh;
+  width: calc(100vw-1);
   background-color: #313131;
 }
 
@@ -62,13 +60,16 @@ body .welcome header .burger div {
   transition: 0.5s transform, 0.5s -webkit-transform;
 }
 
-body .welcome header .nav-bar {
-  height: 80vh;
-  width: 60vw;
+body .welcome .nav-bar {
+  height: 85vh;
+  width: calc(100vw-1);
   position: absolute;
-  top: 10vh;
-  background-color: rgba(114, 114, 114, 0.3);
-  display: none;
+  background-color: rgba(114, 114, 114, 0.5);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -78,9 +79,32 @@ body .welcome header .nav-bar {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
-body .welcome header .nav-bar .nav-links {
+body .welcome .nav-bar .active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+body .welcome .nav-bar .social-links .fa {
+  padding: 8px;
+  font-size: 25px;
+  color: #f0ece2;
+  text-align: center;
+  border-radius: 5%;
+  text-decoration: none;
+  font-family: FontAwesome;
+}
+
+body .welcome .nav-bar .nav-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -94,6 +118,10 @@ body .welcome header .nav-bar .nav-links {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+body .welcome .nav-bar .nav-links a {
+  color: #b1b0b0;
 }
 
 body .welcome .hello {
@@ -138,7 +166,7 @@ body .welcome .hello p {
   letter-spacing: 2px;
 }
 
-body .captures-heading {
+body .sec-heading {
   text-align: center;
   color: #222222;
   font-family: 'Arima Madurai', cursive;
@@ -173,43 +201,16 @@ body .grid-wrapper img:hover {
 
 body .learning {
   background-color: #313131;
-  height: 60vh;
-  width: calc(100vh-17px);
 }
 
-body .learning h2 {
-  text-align: center;
-  color: #f0ece2;
-  font-family: 'Arima Madurai', cursive;
-}
-
-body .learning h3 {
-  text-align: center;
-  color: #f0ece2;
-  margin-top: 5em;
-}
-
-body .learning .s-icons {
-  width: calc(100vh-17px);
-  margin-top: 5em;
-  margin-left: 5em;
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-grid-columns: (minmax(100px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  grid-gap: 20px;
-}
-
-body .learning .s-icons img {
-  width: 50%;
+body .learning img {
+  width: 100%;
+  pointer-events: none;
 }
 
 body .credits {
-  background-color: #414141;
-  width: calc(100vh-17px);
+  background-color: #222222;
+  width: calc(100vw-1);
 }
 
 body .credits p {
@@ -220,7 +221,7 @@ body .credits p {
 }
 
 body .credits .flex-foot {
-  width: calc(100vh-17px);
+  width: calc(100vw-1);
   padding-bottom: 5em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -280,6 +281,24 @@ body .credits .flex-foot .resources a {
   font-family: 'Zilla Slab', serif;
 }
 
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+body::-webkit-scrollbar-track {
+  background: #414141;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #7a7a7a;
+  border-radius: 10px;
+  height: 1em;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #b1b0b0;
+}
+
 @media only screen and (max-width: 640px) {
   body .welcome {
     height: 100vh;
@@ -306,6 +325,9 @@ body .credits .flex-foot .resources a {
     -o-object-fit: contain;
        object-fit: contain;
   }
+  body .captures .no-mobile {
+    display: none;
+  }
   body .learning .s-icons {
     margin-left: 1em;
   }
@@ -323,14 +345,5 @@ body .credits .flex-foot .resources a {
 .toggle .lin3 {
   -webkit-transform: translate3d(0, -8px, 0) rotate(-45deg);
           transform: translate3d(0, -8px, 0) rotate(-45deg);
-}
-
-.fa {
-  padding: 8px;
-  font-size: 25px;
-  color: #f0ece2;
-  text-align: center;
-  border-radius: 5%;
-  text-decoration: none;
 }
 /*# sourceMappingURL=style.css.map */
