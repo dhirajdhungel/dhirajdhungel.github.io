@@ -76,7 +76,7 @@ body .welcome .social-links .fa {
 }
 
 body .welcome .nav-links {
-  height: 50vh;
+  height: 40vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
