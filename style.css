@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@200&family=Glegoo:wght@700&family=Inter:wght@600&family=Oxygen:wght@300&family=Zilla+Slab:ital,wght@1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@200&family=Glegoo:wght@700&family=Inter:wght@200;600&family=Montserrat&family=Oxygen:wght@300&family=Zilla+Slab:ital,wght@1,300;1,400&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 * {
   margin: 0;
@@ -60,41 +60,12 @@ body .welcome header .burger div {
   transition: 0.5s transform, 0.5s -webkit-transform;
 }
 
-body .welcome .nav-bar {
-  height: 85vh;
-  width: calc(100vw-1);
-  position: absolute;
-  background-color: rgba(114, 114, 114, 0.5);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-transform-origin: right;
-          transform-origin: right;
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: -webkit-transform 0.2s;
-  transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s;
-}
-
-body .welcome .nav-bar .active {
+body .welcome .active {
   -webkit-transform: scale(1);
           transform: scale(1);
 }
 
-body .welcome .nav-bar .social-links .fa {
+body .welcome .social-links .fa {
   padding: 8px;
   font-size: 25px;
   color: #f0ece2;
@@ -104,7 +75,8 @@ body .welcome .nav-bar .social-links .fa {
   font-family: FontAwesome;
 }
 
-body .welcome .nav-bar .nav-links {
+body .welcome .nav-links {
+  height: 50vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -120,8 +92,16 @@ body .welcome .nav-bar .nav-links {
           justify-content: space-between;
 }
 
-body .welcome .nav-bar .nav-links a {
+body .welcome .nav-links a {
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  font-size: 2em;
   color: #b1b0b0;
+}
+
+body .welcome .nav-links a:hover {
+  background-color: #313131;
+  border-radius: 5px;
 }
 
 body .welcome .hello {
@@ -281,6 +261,37 @@ body .credits .flex-foot .resources a {
   font-family: 'Zilla Slab', serif;
 }
 
+.nav-bar {
+  height: 85vh;
+  width: 100%;
+  position: absolute;
+  float: left;
+  background-color: rgba(88, 88, 88, 0.5);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  right: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
 body::-webkit-scrollbar {
   width: 0.5em;
 }
@@ -325,11 +336,17 @@ body::-webkit-scrollbar-thumb:hover {
     -o-object-fit: contain;
        object-fit: contain;
   }
-  body .captures .no-mobile {
+  body .no-mobile {
     display: none;
   }
   body .learning .s-icons {
     margin-left: 1em;
+  }
+}
+
+@media only screen and (max-width: 1920px) {
+  body .grid-wrapper .for-fhd {
+    display: none;
   }
 }
 
