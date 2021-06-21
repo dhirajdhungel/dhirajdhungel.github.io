@@ -57,6 +57,7 @@ body{
             transform: scale(1);
         }
             .social-links{
+                margin: 5em 0;
                 .fa{
                     padding: 8px;
                     font-size: 25px;
@@ -65,6 +66,9 @@ body{
                     border-radius: 5%;
                     text-decoration: none;
                     font-family: FontAwesome;
+                }
+                .fa:hover{
+                    opacity: 0.5;
                 }
             }
             .nav-links{
@@ -203,7 +207,7 @@ body{
     right: 0;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    // justify-content: space-around;
     transform: scale(0);
     transform-origin: top;
     transition: transform 0.2s;

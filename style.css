@@ -65,6 +65,10 @@ body .welcome .active {
           transform: scale(1);
 }
 
+body .welcome .social-links {
+  margin: 5em 0;
+}
+
 body .welcome .social-links .fa {
   padding: 8px;
   font-size: 25px;
@@ -73,6 +77,10 @@ body .welcome .social-links .fa {
   border-radius: 5%;
   text-decoration: none;
   font-family: FontAwesome;
+}
+
+body .welcome .social-links .fa:hover {
+  opacity: 0.5;
 }
 
 body .welcome .nav-links {
@@ -280,8 +288,6 @@ body .credits .flex-foot .resources a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   -webkit-transform: scale(0);
           transform: scale(0);
   -webkit-transform-origin: top;
