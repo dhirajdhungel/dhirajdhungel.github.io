@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@200&family=Glegoo:wght@700&family=Inter:wght@200;600&family=Montserrat&family=Oxygen:wght@300&family=Zilla+Slab:ital,wght@1,300;1,400&display=swap');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@200&family=Glegoo:wght@700&family=Inter:wght@600&family=Oxygen:wght@300&family=Zilla+Slab:ital,wght@1,300;1,400&display=swap');@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
 $bg : #222222;
 $bg2 : #313131;
@@ -78,7 +77,7 @@ body{
                 align-items: center;
                 justify-content: space-between;
                 a{
-                    font-family: 'Montserrat', sans-serif;
+                    font-family: 'Glegoo', serif;
                     text-decoration: none;
                     font-size: 2em;
                     color: $white1;
@@ -228,7 +227,7 @@ body::-webkit-scrollbar-thumb:hover{
     background-color: $white1;
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 719px) {
     body{
         .welcome{
             height: 100vh;
@@ -254,13 +253,15 @@ body::-webkit-scrollbar-thumb:hover{
             }
         }
         .grid-wrapper{
-
             img{
                 object-fit: contain;
                 }
             }
             .no-mobile{
                 display: none;
+            }
+            .for-fhd{
+                display:none;
             }
         .learning{
             .s-icons{
@@ -269,12 +270,25 @@ body::-webkit-scrollbar-thumb:hover{
         }
     }
 }
-@media only screen and (max-width: 1920px) {
+@media only screen and (min-width: 1460px) and (max-width: 1829px) {
     body{
         .grid-wrapper{
-            .for-fhd{
+            .no-fhd{
                 display: none;
             }
+            .bel-fhd{
+                display: block;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1090px) and (max-width: 1459px) {
+    body{
+        .grid-wrapper{
+            .no-fhd{
+                display: none;
+            }
+
         }
     }
 }

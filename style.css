@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@200&family=Glegoo:wght@700&family=Inter:wght@200;600&family=Montserrat&family=Oxygen:wght@300&family=Zilla+Slab:ital,wght@1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@200&family=Glegoo:wght@700&family=Inter:wght@600&family=Oxygen:wght@300&family=Zilla+Slab:ital,wght@1,300;1,400&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 * {
   margin: 0;
@@ -101,7 +101,7 @@ body .welcome .nav-links {
 }
 
 body .welcome .nav-links a {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Glegoo', serif;
   text-decoration: none;
   font-size: 2em;
   color: #b1b0b0;
@@ -316,7 +316,7 @@ body::-webkit-scrollbar-thumb:hover {
   background-color: #b1b0b0;
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 719px) {
   body .welcome {
     height: 100vh;
   }
@@ -345,13 +345,25 @@ body::-webkit-scrollbar-thumb:hover {
   body .no-mobile {
     display: none;
   }
+  body .for-fhd {
+    display: none;
+  }
   body .learning .s-icons {
     margin-left: 1em;
   }
 }
 
-@media only screen and (max-width: 1920px) {
-  body .grid-wrapper .for-fhd {
+@media only screen and (min-width: 1460px) and (max-width: 1829px) {
+  body .grid-wrapper .no-fhd {
+    display: none;
+  }
+  body .grid-wrapper .bel-fhd {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1090px) and (max-width: 1459px) {
+  body .grid-wrapper .no-fhd {
     display: none;
   }
 }
