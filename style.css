@@ -16,7 +16,8 @@ body .welcome {
   padding: 0;
   height: 100vh;
   width: calc(100vw-1);
-  background-color: #313131;
+  background: #c79e53;
+  background: radial-gradient(circle, #c79e53 0%, #bb6339 22%, #4f0f4c 70%, #020050 100%);
 }
 
 body .welcome header {
