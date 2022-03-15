@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #f0ece2;
+  background-color: #e0e0e0;
   padding: 0;
   margin: 0;
 }
@@ -39,10 +39,11 @@ body .welcome header {
 
 body .welcome header a {
   margin-left: 3em;
-  color: #f0ece2;
+  color: #e0e0e0;
   font-family: 'Inter', sans-serif;
-  font-size: 30px;
+  font-size: 32px;
   text-decoration: none;
+  font-weight: bolder;
 }
 
 body .welcome header .burger {
@@ -53,7 +54,7 @@ body .welcome header .burger {
 body .welcome header .burger div {
   width: 30px;
   height: 3px;
-  background-color: #f0ece2;
+  background-color: #e0e0e0;
   margin: 5px 0;
   -webkit-transition: 0.5s -webkit-transform;
   transition: 0.5s -webkit-transform;
@@ -73,7 +74,7 @@ body .welcome .social-links {
 body .welcome .social-links .fa {
   padding: 8px;
   font-size: 25px;
-  color: #f0ece2;
+  color: #e7e7e7;
   text-align: center;
   border-radius: 5%;
   text-decoration: none;
@@ -105,7 +106,7 @@ body .welcome .nav-links a {
   font-family: 'Glegoo', serif;
   text-decoration: none;
   font-size: 2em;
-  color: #b1b0b0;
+  color: #e0e0e0;
 }
 
 body .welcome .nav-links a:hover {
@@ -148,7 +149,7 @@ body .welcome .hello .profile .profile-p {
 
 body .welcome .hello p {
   font-family: 'Glegoo', serif;
-  color: #f0ece2;
+  color: #e0e0e0;
   margin: 0px;
   padding: 25px;
   font-size: 2em;
@@ -164,7 +165,7 @@ body .sec-heading {
 
 body .grid-wrapper {
   margin-bottom: 2em;
-  background-color: #f0ece2;
+  background-color: #e0e0e0;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(350px, 1fr))[auto-fill];
@@ -276,8 +277,8 @@ body .credits .flex-foot .resources a {
   position: absolute;
   float: left;
   background-color: rgba(88, 88, 88, 0.5);
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -297,6 +298,7 @@ body .credits .flex-foot .resources a {
   transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
   transition: transform 0.2s, -webkit-transform 0.2s;
+  border-radius: 30px;
 }
 
 body::-webkit-scrollbar {

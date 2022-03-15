@@ -5,7 +5,7 @@ $bg2 : #313131;
 $mbg: #414141;
 $fg: #525252;
 $red: #ca3e47;
-$white: #f0ece2;
+$white: #e0e0e0;
 $white1: #b1b0b0;
 $diplo: #7a7a7a;
 
@@ -27,7 +27,6 @@ body{
         // background-color: $bg2;
         background: rgb(199,158,83);
         background: radial-gradient(circle, rgba(199,158,83,1) 0%, rgba(187,99,57,1) 22%, rgba(79,15,76,1) 70%, rgba(2,0,80,1) 100%);
-        
         header{
             height: 15vh;
             display: flex;
@@ -39,8 +38,9 @@ body{
                 margin-left: 3em;
                 color: $white;
                 font-family: 'Inter', sans-serif;
-                font-size: 30px;
+                font-size: 32px;
                 text-decoration: none;
+                font-weight: bolder;
                 
             }
             .burger{
@@ -63,7 +63,7 @@ body{
                 .fa{
                     padding: 8px;
                     font-size: 25px;
-                    color: #f0ece2;
+                    color: #e7e7e7;
                     text-align: center;
                     border-radius: 5%;
                     text-decoration: none;
@@ -83,7 +83,7 @@ body{
                     font-family: 'Glegoo', serif;
                     text-decoration: none;
                     font-size: 2em;
-                    color: $white1;
+                    color: $white;
                 }
                 a:hover{
                     background-color: $bg2;
@@ -204,7 +204,7 @@ body{
     position: absolute;
     float: left;
     background-color: rgba($color: rgb(88, 88, 88), $alpha: 0.5);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(15px);
     display: flex;
     right: 0;
     flex-direction: column;
@@ -213,6 +213,7 @@ body{
     transform: scale(0);
     transform-origin: top;
     transition: transform 0.2s;
+    border-radius: 30px;
 }
 body::-webkit-scrollbar{
     width: 0.5em;
